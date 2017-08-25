@@ -596,7 +596,7 @@ open class Chart: UIControl {
             if xLabelsOrientation == .horizontal {
                 // Add left padding
                 label.frame.origin.y -= (label.frame.height - bottomInset) / 2
-                label.frame.origin.x += padding - 25
+                label.frame.origin.x += padding - 10
 
                 // Set label's text alignment
                 label.frame.size.width = (drawingWidth / CGFloat(labels.count)) - padding * 2
