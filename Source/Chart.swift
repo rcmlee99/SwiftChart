@@ -526,8 +526,8 @@ open class Chart: UIControl {
 
         // horizontal axis at the top
         context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
-        context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
-        context.strokePath()
+        //context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
+        //context.strokePath()
 
         // horizontal axis when y = 0
         if min.y < 0 && max.y > 0 {
@@ -539,13 +539,13 @@ open class Chart: UIControl {
 
         // vertical axis on the left
         context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
-        context.addLine(to: CGPoint(x: CGFloat(0), y: drawingHeight + topInset))
-        context.strokePath()
+        //context.addLine(to: CGPoint(x: CGFloat(0), y: drawingHeight + topInset))
+        //context.strokePath()
 
         // vertical axis on the right
         context.move(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
-        context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: drawingHeight + topInset))
-        context.strokePath()
+        //context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: drawingHeight + topInset))
+        //context.strokePath()
 
     }
 
@@ -596,7 +596,7 @@ open class Chart: UIControl {
             if xLabelsOrientation == .horizontal {
                 // Add left padding
                 label.frame.origin.y -= (label.frame.height - bottomInset) / 2
-                label.frame.origin.x += padding
+                label.frame.origin.x += padding - 25
 
                 // Set label's text alignment
                 label.frame.size.width = (drawingWidth / CGFloat(labels.count)) - padding * 2
